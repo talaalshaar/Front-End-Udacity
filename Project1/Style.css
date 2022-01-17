@@ -1,0 +1,99 @@
+@import "nav.css";
+@import "footer.css";
+@import "columns.css";
+
+* {
+    box-sizing: border-box;
+  }
+ 
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+}
+  #grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"nav"
+		"hd"
+		"sd"
+		"post-imgs"
+		"bg"
+		"hr"
+		"ft";
+}
+
+
+  
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background-image: url('repeated-hearts-drawn-hand-cute-seamless-vector-33282412.jpg');
+  }
+  
+  
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background:rgb(243, 232, 232);
+  }
+  
+
+
+  .p1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: dimgrey;
+  }
+  
+  .p2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: dimgrey;
+    font-size: large;
+    font-style: italic;
+  }
+
+  img {
+         width:100%;
+         height:100%;
+        object-fit:cover;
+      }
+  
+
+.btn {
+  background-color: #b691c5; 
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display:inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  box-shadow:#a388b4;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #c7a5d4;}
+
+
+
+
+
+

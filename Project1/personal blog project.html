@@ -1,78 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-
-body {
-  font-family: Arial;
-  padding: 20px;
-  background-image: url('repeated-hearts-drawn-hand-cute-seamless-vector-33282412.jpg');
-}
-
-
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background:rgb(243, 232, 232);
-}
-
-
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
-
-.card {
-   background-color: whitesmoke;
-   padding: 20px;
-   margin-top: 20px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.footer {
-  padding: 20px;
-  text-align: center;
-  background-color: ghostwhite;
-  margin-top: 20px;
-}
-
-.p1{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: dimgrey;
-}
-
-img {
-                width:100%;
-                height:100%;
-                object-fit:cover;
-            }
-
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-</style>
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>My persornal Web blog</title>
+    <link rel="stylesheet" href="style.css">
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,700|Playfair+Display:400,700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 <body>
+  <div id="grid-container">
+    <nav>
+      <ul id="nav-ul">
+        <li class="nav-item">
+          <a class="nav-link" href="personal blog project.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="personal blog project2.html">BLOG</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
 <div class="header">
   <h2>Color & Shine blog</h2>
@@ -83,13 +34,15 @@ img {
     <div class="card">
       <h2>Fashion is more than clothing</h2>
       <h5>Jan 12, 2022</h5>
-      <h5>“Art is the expression or application of human creative skill and imagination” — Oxford Dictionaries</h5>
+      <h5>Art is the expression or application of human creative skill and imagination </h5>
       <div> <img src="fashion.jpg" width="650px"></div>
       <p class="p1">Art doesnt just appear in a museum or on a slab of a canvas. Art is everywhere. Its in the music we sing, the words we write, and the clothes we make.</p>
       <p class="p1">Its an expression of our creative imagination whether it be simple or abstract. Art isnt defined by a group of thought leaders or Merriam Websters Dictionary. Art is whatever you deem it to be.</p>
-      <p class="p1"><break></break></p>
       <p class="p1">Fashion is art. Its a form of creative expression carried out by a designer and put on our blank canvassed bodies.</p>
       <p class="p1">When we start to look at fashion, and any other creative skill, our perception of it will change and we will have a better appreciation for it.</p>
+      <a href="personal blog project2.html">
+        <button class="button button1">See more</button>
+      </a>
     </div>
 
 
@@ -124,9 +77,27 @@ img {
   </div>
 </div>
 
-<div class="footer">
-  <h2></h2>
-</div>
+
+<footer>
+				<em> ©2022</em>
+				<em> Made by Tala</em>
+				<section>
+
+					<a href="https://www.linkedin.com/">
+            <button class="btn">Linkedin</button>
+          </a>
+          
+				
+					<a href="https://twitter.com">
+            <button class="btn">Twitter</button>
+          </a>
+
+					<a href="https://www.facebook.com/">
+            <button class="btn">Facebook</button>
+          </a>
+
+				</section>
+			</footer>
 
 </body>
 </html>
