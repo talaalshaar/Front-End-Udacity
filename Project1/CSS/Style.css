@@ -15,14 +15,7 @@
   #grid-container {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-areas:
-		"nav"
-		"hd"
-		"sd"
-		"post-imgs"
-		"bg"
-		"hr"
-		"ft";
+
 }
 
 
@@ -30,7 +23,7 @@
   body {
     font-family: Arial;
     padding: 20px;
-    background-image: url('repeated-hearts-drawn-hand-cute-seamless-vector-33282412.jpg');
+    background-image: url("../img/Wall.jpg");
   }
   
   
