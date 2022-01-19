@@ -15,10 +15,13 @@
   #grid-container {
 	display: grid;
 	grid-template-columns: 1fr;
-
 }
 
-
+#grid-container-BlogPage {
+	display: grid;
+	grid-template-columns: 1fr;
+  grid-area: auto;
+}
   
   body {
     font-family: Arial;
