@@ -24,15 +24,15 @@
 */
 const sections = Array.from(document.querySelectorAll('section'));
 const menu = document.getElementById('navbar__list');
-let numberOfListItems  = sections.length;
+let numberOfListItems = sections.length;
 
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */
-function createListItem(){
-    for(section of sections){
+function createListItem() {
+    for (section of sections) {
         sectionName = section.getAttribute('data-nav');
         sectionLink = section.getAttribute('id');
 
@@ -48,17 +48,17 @@ function createListItem(){
 }
 
 //determine if section in viewport
-function sectionInViewPort(elem){
+function sectionInViewPort(elem) {
     let sectionPos = elem.getBoundingClientRect();
     return (sectionPos.top >= 0);
 }
 
 //gives section beung viewed a different appearance
-function toggleActiveClass(){
-    for(section of sections){
-        if (sectionInViewPort(section)){
+function toggleActiveClass() {
+    for (section of sections) {
+        if (sectionInViewPort(section)) {
             //if it doesnt contains you active class
-            if(!section.classList.contains('your-active-class')){
+            if (!section.classList.contains('your-active-class')) {
                 //add it
                 section.classList.add('your-active-class');
             }
@@ -76,20 +76,20 @@ function toggleActiveClass(){
 var mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 // build the nav
@@ -97,7 +97,7 @@ function topFunction() {
 createListItem();
 
 // Add class 'active' to section when near top of viewport
-document.addEventListener('scroll',toggleActiveClass);
+document.addEventListener('scroll', toggleActiveClass);
 
 // Scroll to anchor ID using scrollTO event
 
@@ -105,7 +105,7 @@ document.addEventListener('scroll',toggleActiveClass);
 /**
  * End Main Functions
  * Begin Events
- * 
+ *
 */
 
 // Build menu 
