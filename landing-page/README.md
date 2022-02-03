@@ -14,4 +14,4 @@ The project is built according to these steps:
 5. Add the functionality to scroll to sections.
 6. Test the performance.
 7. Add an active state to navigation items when a section is in the viewport
-8. 
+
