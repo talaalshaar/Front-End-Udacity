@@ -4,7 +4,6 @@
 */
 const Menu = document.getElementById('navbar__list');
 const sections = document.querySelectorAll('section');
-
 /**
  * End Global Variables
  * Start Helper Functions
@@ -21,16 +20,18 @@ const sections = document.querySelectorAll('section');
 // build the nav
 NavBuilder = () => {
     //to loop from section 1 to 4 and add sections to navigation 
-    for (s = 0; s <= sections.length; s++) {
+    for (s = 0; s < sections.length; s++) {
         //const el = document.querySelector('data-nav');
         const liElem = document.createElement('li');
         const Id = sections[s].id;
         const DataNav = sections[s].dataset.nav;
         liElem.innerHTML = `<li><a class="menu__link" href="#${Id}">${DataNav}</a></li>`;
         Menu.appendChild(liElem);
-
+        
     }
+
 }
+
 
 window.addEventListener('scroll', (e) => {
     sections.forEach(s => {
@@ -43,11 +44,25 @@ window.addEventListener('scroll', (e) => {
             s.classList.remove('your-active-class');
         }
     });
-
-
 });
 
 NavBuilder();
+
+
+ scrollFunction = () => {
+    const menuLink = document.querySelectorAll(".menu__link")
+    menuLink.forEach((anchor) => {
+        anchor.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.querySelector(anchor.getAttribute("href")).scrollIntoView({
+                behavior: "smooth",
+            });
+        });
+    });
+};
+
+scrollFunction();
+
 
 // Add class 'active' to section when near top of viewport
 
@@ -62,5 +77,3 @@ NavBuilder();
 // Scroll to section on link click
 
 // Set sections as active
-
-
