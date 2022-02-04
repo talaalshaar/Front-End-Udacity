@@ -16,3 +16,7 @@ The project is built according to these steps:
 * Test the performance.
 * Add an active state to navigation items when a section is in the viewport
 
+## Functionality
+This webiste offers the user to scroll between sections and highlight the section that has been viewed inside the view port.
+also on clicking on the navigation bar it takes you to the section that you clicked with highlighting the list item you clicked on.
+all og this has benn coded using pure javascript without using any libraries (like JSON .. and so on).
