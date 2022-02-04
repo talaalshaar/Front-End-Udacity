@@ -1,20 +1,12 @@
 /**
  * Define Global Variables
- * 
 */
 const Menu = document.getElementById('navbar__list');
 const sections = document.querySelectorAll('section');
+const menuLink = document.querySelectorAll(".menu__link");
+
 /**
  * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- *
 */
 
 // build the nav
@@ -27,13 +19,12 @@ NavBuilder = () => {
         const DataNav = sections[s].dataset.nav;
         liElem.innerHTML = `<li><a class="menu__link" href="#${Id}">${DataNav}</a></li>`;
         Menu.appendChild(liElem);
-        
+
     }
-
 }
+NavBuilder();
 
-
-window.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', () => {
     sections.forEach(s => {
         const topDistance = s.getBoundingClientRect().top;
         // if the distance to the top is between 0-150px
@@ -42,15 +33,42 @@ window.addEventListener('scroll', (e) => {
             // otherwise, remove the class
         } else {
             s.classList.remove('your-active-class');
+
         }
     });
 });
 
-NavBuilder();
+// scrolling = () => {
+//     menuLink.forEach((anchor) => {
+//         menuLink.forEach((anchor) => {
+//             anchor.classList.remove("active");
+//         });
+//         anchor.classList.add("active");
+//     });
+// }
 
 
- scrollFunction = () => {
-    const menuLink = document.querySelectorAll(".menu__link")
+// window.onscroll = function () {
+//     scrolling();
+// };
+
+//set style to highlight active navigation bar elements
+addStyle = () => {
+    menuLink.forEach((anchor) => {
+        anchor.addEventListener("click", function () {
+            menuLink.forEach((anchor) => {
+                anchor.classList.remove("active");
+            });
+            anchor.classList.add("active");
+        });
+    });
+}
+addStyle();
+
+
+
+scrollFunction = () => {
+    const menuLink = document.querySelectorAll(".menu__link");
     menuLink.forEach((anchor) => {
         anchor.addEventListener("click", function (event) {
             event.preventDefault();
@@ -60,20 +78,8 @@ NavBuilder();
         });
     });
 };
-
 scrollFunction();
-
-
-// Add class 'active' to section when near top of viewport
 
 /**
  * End Main Functions
- * Begin Events
- *
 */
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
