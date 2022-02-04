@@ -3,8 +3,6 @@
 */
 const Menu = document.getElementById('navbar__list');
 const sections = document.querySelectorAll('section');
-const menuLink = document.querySelectorAll(".menu__link");
-
 /**
  * End Global Variables
 */
@@ -38,6 +36,20 @@ window.addEventListener('scroll', () => {
     });
 });
 
+//set style to highlight active navigation bar elements
+const menuLink = document.querySelectorAll(".menu__link");
+addStyle = () => {
+    menuLink.forEach((anchor) => {
+        anchor.addEventListener("click", function () {
+            menuLink.forEach((anchor) => {
+                anchor.classList.remove("active");
+            });
+            anchor.classList.add("active");
+        });
+    });
+}
+addStyle();
+
 // scrolling = () => {
 //     menuLink.forEach((anchor) => {
 //         menuLink.forEach((anchor) => {
@@ -51,20 +63,6 @@ window.addEventListener('scroll', () => {
 // window.onscroll = function () {
 //     scrolling();
 // };
-
-//set style to highlight active navigation bar elements
-addStyle = () => {
-    menuLink.forEach((anchor) => {
-        anchor.addEventListener("click", function () {
-            menuLink.forEach((anchor) => {
-                anchor.classList.remove("active");
-            });
-            anchor.classList.add("active");
-        });
-    });
-}
-addStyle();
-
 
 
 scrollFunction = () => {
