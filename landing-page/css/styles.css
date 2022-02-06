@@ -1,3 +1,5 @@
+
+   
 /*
  *
  * CSS written based on SMACSS architecture.
@@ -74,7 +76,8 @@ section {
 }
 
 .navbar__menu li {
-    display: inline-flex;
+    display: inline-block;
+    
 }
 
 .navbar__menu .menu__link {
