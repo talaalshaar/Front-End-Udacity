@@ -67,7 +67,28 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+.nav-toggle {
+    display: none;
+    padding: 0;
+}
+
+/* .navbar__menu {
+    height: 50px;
+} */
+
+.navbar__menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:gray;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #FFF;
+    height: 50px;
+    padding: 1em;
+}
 .navbar__menu ul {
+    display: flex;
     padding: 2px;
     padding-left: 0;
     margin: 0;
@@ -77,11 +98,10 @@ section {
 
 .navbar__menu li {
     display: inline-block;
-    
 }
 
 .navbar__menu .menu__link {
-    display: inline-block;
+    display: block;
     padding: 7px;
     font-weight: bold;
     text-decoration: none;
@@ -93,7 +113,70 @@ section {
     color: #fff;
     transition: ease 0.3s all;
 }
-
+@media screen and (max-width: 700px) {
+    .navbar__menu ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .nav-toggle {
+        display: block;
+        padding: .5em;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        position: absolute;
+        left: 1em;
+        top: 1em;
+        z-index: 1000;
+    }
+    .page_header .navbar_menu.toggled {
+        transform: translateX(0);
+        display: block;
+    }
+    .nav-open .nav-toggle {
+        position: fixed;
+    }
+    .nav-open .burger {
+        transform: rotate(.625turn);
+    }
+    .nav-open .burger::before {
+        transform: rotate(90deg) translateX(-6px);
+    }
+    .nav-open .burger::after {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+        position: relative;
+    }
+    .burger,
+    .burger::before,
+    .burger::after {
+        background: red;
+        width: 2em;
+        height: 3px;
+        border-radius: 1em;
+        transition: transform 250ms ease-in-out;
+    }
+    .burger::before,
+    .burger::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .burger::before {
+        top: 6px;
+    }
+    .burger::after {
+        bottom: 6px;
+    }
+    .navbar__menu {
+        display: none;
+        transition: all 0.3s;
+    }
+}
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -113,9 +196,6 @@ section {
 .page__footer p{
     color: #fff;
 }
-
-
-
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
@@ -240,13 +320,6 @@ section.your-active-class .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
-}
-
-#btn{
-    background-color: gray;
-    text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .active {
