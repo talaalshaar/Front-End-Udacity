@@ -1,4 +1,3 @@
-
    
 /*
  *
@@ -72,21 +71,17 @@ section {
     padding: 0;
 }
 
-/* .navbar__menu {
-    height: 50px;
-} */
-
 .navbar__menu{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color:gray;
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #FFF;
     height: 50px;
     padding: 1em;
 }
+
 .navbar__menu ul {
     display: flex;
     padding: 2px;
@@ -98,6 +93,8 @@ section {
 
 .navbar__menu li {
     display: inline-block;
+    background-color: gray;
+    
 }
 
 .navbar__menu .menu__link {
@@ -113,12 +110,17 @@ section {
     color: #fff;
     transition: ease 0.3s all;
 }
+
 @media screen and (max-width: 700px) {
     .navbar__menu ul {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
-    
+    .page__header,
+    .navbar__menu,
+    #navbar__list {
+        height: auto!important;
+    }
     .nav-toggle {
         display: block;
         padding: .5em;
@@ -130,7 +132,7 @@ section {
         top: 1em;
         z-index: 1000;
     }
-    .page_header .navbar_menu.toggled {
+    .page__header .navbar__menu.toggled {
         transform: translateX(0);
         display: block;
     }
@@ -177,6 +179,7 @@ section {
         transition: all 0.3s;
     }
 }
+
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -196,6 +199,9 @@ section {
 .page__footer p{
     color: #fff;
 }
+
+
+
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
@@ -327,3 +333,5 @@ section.your-active-class .landing__container::after {
     background-color: black;
     color: white;
   }
+
+
