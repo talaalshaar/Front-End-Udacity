@@ -73,16 +73,17 @@ scrollFunction = () => {
 scrollFunction();
 
 
-const navBar = document.querySelector(".page__header");
-const navToggle = document.querySelector(".nav-toggle");
+const pageHeader = document.querySelector(".page__header");
+const toggle = document.querySelector(".toggle");
+const navmenu = document.querySelector(".navbar__menu");
 
-const collapseNavBar = (navToggle) => {
-    navToggle.addEventListener("click", () => {
-      navBar.classList.toggle("nav-open");
-      document.querySelector(".navbar__menu").classList.toggle("toggled");
+const collapsibale = (toggle) => {
+    toggle.addEventListener("click", () => {
+        pageHeader.classList.toggle("nav-open");
+        navmenu.classList.toggle("toggled");
     });
   };
-  collapseNavBar(navToggle); 
+  collapsibale(toggle); 
 
 /**
  * End Main Functions
