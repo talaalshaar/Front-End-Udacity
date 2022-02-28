@@ -65,9 +65,9 @@ const  postData = async(url = '', data = {}) => {
       const req = await fetch('/add');
       try{
         const allData = await req.json();
-        document.getElementById('date').innerHTML = "Date: " + allData.date;
-        document.getElementById('temp').innerHTML = "Temp: " + allData.temp;
-        document.getElementById('content').innerHTML = "Content: "+ allData.content;
+        document.getElementById('date').innerHTML = `Date: ${allData.date}`;
+        document.getElementById('temp').innerHTML = `Temp: ${allData.temp}`;
+        document.getElementById('content').innerHTML = `Temp: ${allData.content}`;
 
       }catch(error){
         console.log("error", error);

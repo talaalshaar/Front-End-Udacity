@@ -1,30 +1,31 @@
-body{
-    background: #fffff8;
+.body{
+    display: block;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 #app{
-    display: grid;
+    background: rgb(218, 236, 240);
+    background: linear-gradient(0deg, rgb(218, 236, 240) 0%, rgba(144, 194, 238, 0.756) 100%);
+    display:block;
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
     height:100vh;
-    background: #f23557;
-    color: #f0d43a;
+    color: #3b4a6b;
     justify-content: center;
     grid-gap: 1em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
 
-.holder{
+/* .holder{
 
-}
+} */
 
 .entry{
     background: rgba(59, 74, 107, .4);
 }
 
-#entryHolder{
+/* #entryHolder{
 
 }
 
@@ -45,7 +46,7 @@ body{
 }
 .title{
 
-}
+} */
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
@@ -54,21 +55,21 @@ label{
 }
 
 input{
-    display:block;
     height: 60px;
     width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
+    background:whitesmoke;
+    color: gray;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border: none;
 }
 
 button{
+    display: inline-block;
     width: 400px;
     height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
+    background:whitesmoke;
+    color: gray;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
     border: none;
@@ -79,8 +80,8 @@ h1{
 }
 
 textarea{
-    background:#22b2da;
-    color: #f0d43a;
+    background:whitesmoke;
+    color: gray;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
@@ -93,19 +94,19 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
+    color: gray; 
     font-family: 'Oswald', sans-serif;
 
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
+    color:gray; 
     font-family: 'Oswald', sans-serif;
 
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
+    color: gray; 
     font-family: 'Oswald', sans-serif;
 
 } 
