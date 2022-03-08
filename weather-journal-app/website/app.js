@@ -16,7 +16,7 @@ generate.addEventListener('click', function performAction() {
 
   getData(baseURL, zip, apiKey)
     .then(function (data) {
-      postData('/addData', { temperature: data.main.temp, date: newDate, feel: feelings })
+      postData('/addData', { temperature: data.main.temp.toString(), date: newDate, feel: feelings })
     })
     .then(() => retrieveData());
 
@@ -69,7 +69,7 @@ const retrieveData = async () => {
     const allData = await request.json()
     console.log(allData)
     // Write updated data to DOM elements
-    document.getElementById('temp').innerHTML = Math.round(allData.temp) + 'degrees';
+    document.getElementById('temp').innerHTML = Math.round(allData.temperature) + 'degrees';
     document.getElementById('content').innerHTML = allData.feel;
     document.getElementById("date").innerHTML = allData.date;
   }
