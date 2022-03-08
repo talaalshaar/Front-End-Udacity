@@ -33,16 +33,17 @@ function listening() {
 
 app.get('/all', function sendData(req, res) {
     res.send(projectData);
+    //console.log(projectData);
 });
 
 app.post('/addData', addData)
 function addData(req, res) {
     console.log(req.body)
-    newEntry = {
-        temperature: req.body.temperature,
-        date: req.body.date,
-        response: req.body.response
-    }
-    projectData.push(newEntry);
-    console.log(projectData)
+    // newEntry = {
+    //     temperature: req.body.temperature,
+    //     date: req.body.date,
+    //     response: req.body.response
+    // }
+    projectData = req.body;
+	res.send(projectData);
 }
