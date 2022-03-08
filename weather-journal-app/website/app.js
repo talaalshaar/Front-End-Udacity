@@ -17,9 +17,10 @@ generate.addEventListener('click', function performAction() {
   getData(baseURL, zip, apiKey)
     .then(function (data) {
       postData('/addData', { temperature: data.main.temp, date: newDate, feel: feelings })
-    });
+    })
+    .then(() => retrieveData());
+
 })
-  .then(() => retrieveData());
 
 
 
