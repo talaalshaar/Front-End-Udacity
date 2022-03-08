@@ -4,7 +4,8 @@ const apiKey = '&appid=6e71cc86d272205abd73f3cd77945cf1';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
+let newDate = d.getMonth()+1 + '.' + d.getDate() + '.' + d.getFullYear();
+
 /* Function called by event listener */
 const generate = document.getElementById('generate');
 
@@ -13,7 +14,6 @@ generate.addEventListener('click', function performAction() {
   const zip = document.getElementById('zip').value;
   const feelings = document.getElementById('feelings').value;
 
-
   getData(baseURL, zip, apiKey)
     .then(function (data) {
       postData('/addData', { temperature: data.main.temp, date: newDate, feel: feelings })
@@ -21,8 +21,6 @@ generate.addEventListener('click', function performAction() {
     .then(() => retrieveData());
 
 })
-
-
 
 /* Function to GET Web API Data*/
 const getData = async (baseURL, zip, apiKey) => {
